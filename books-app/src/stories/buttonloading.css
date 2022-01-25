@@ -1,0 +1,63 @@
+.button-loading-primary {
+  color: #fff;
+  background-color: #bdbdbd;
+  display: inline-block;
+  font-weight: 400;
+  line-height: 1.5;
+  border: 1px none;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  border-radius: 0.25rem;
+}
+
+.button-loading-secondary {
+  color: #bdbdbd;
+  background-color: transparent;
+  display: inline-block;
+  font-weight: 400;
+  line-height: 1.5;
+  border: 1px none;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  border-radius: 0.25rem;
+  border: #bdbdbd;
+  border: 1px solid #e0e0e0;
+}
+
+.button-loading-secondary path {
+fill: #bdbdbd;
+}
+
+.button-loading-minimal {
+  color: #BDBDBD;
+  background-color: transparent;
+  display: inline-block;
+  font-weight: 400;
+  line-height: 1.5;
+  border: 1px none;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  border-radius: 0.25rem;
+}
+
+.button-loading-minimal path {
+  fill: #bdbdbd;
+  }

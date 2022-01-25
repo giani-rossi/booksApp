@@ -11,7 +11,7 @@ const FirstSignUp = ({data}) => {
         
 <div className='card-add-books'>
   <div>
-    <h3 className='title-add-books'>Holi!</h3 >
+    <h3 className='title-add-books'>Holi !</h3 >
     <p className='text-add-books'>
     Para arrancar sumá algunos libros que tengas.
     </p>

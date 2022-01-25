@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+
+.title-add-books {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  text-align: left;
+  margin-left: 24px;
+  margin-top: 24px;
+  margin-bottom: 0;
+}
+
+.text-add-books {
+  margin-top: 0;
+  font-size: 12px;
+  text-align: left;
+  margin-left: 24px;
+  font-family: "Roboto", sans-serif;
+  margin-bottom: 0;
+}
+
+.button-add-books {
+  width: 114px;
+  text-align: left;
+  margin-left: 24px;
+  margin-top: 12px;
+  position: absolute;
+  left: 0;
+  margin-bottom: 24px;
+  height: 32px;
+  font-size: 12px;
+}
+
+.card-add-books {
+  height: 120px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 8px;
+  background: linear-gradient(180deg, #f9fb96 0%, #fcff7c 83.85%, #f7fa88 100%);
+  width: 345px;
+  text-align: center;
+  top: 97px;
+}

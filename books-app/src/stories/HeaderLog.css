@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+.header-log {
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    margin-top: 24px;
+    font-size: 16px;
+    transform: translateX(-50%);
+  
+  }
+  
+  h1::after{
+    content: '';
+    position: absolute;
+    width: 327px;
+    height: 1px;
+    background-color: black;
+    text-align: center;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+  
+  }

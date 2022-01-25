@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+
+.image-book {
+  width: 61px;
+  height: 93px;
+  left: 24px;
+  top: 297px;
+}
+
+.collection-books {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  transform: translateX(-50%);
+  
+}
+
+
+.collection-books::after{
+    content: '';
+    position: absolute;
+    width: 327px;
+  
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.1);
+    text-align: center;
+    top: 120px;
+    left: 50%;
+    transform: translateX(-50%);
+
+  
+  }
+
+
+.collection-card {
+    margin-left: 10px;
+    
+}
