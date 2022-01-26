@@ -71,6 +71,7 @@ const Collection = (props) => {
   const { name, qtybooks, children, ...rest } = props;
   return (
     <>
+    <div className="collection">
       <div className="collection-profile">
         <img
           className="collection-profile-image"
@@ -91,6 +92,7 @@ const Collection = (props) => {
             <img className="image-book" src={item.image} alt="img" />
           </div>
         ))}
+        </div>
       </div>
     </>
   );

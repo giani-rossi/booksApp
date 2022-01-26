@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+
+.divisor {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.divisor-text {
+  line-height: 14px;
+  font-size: 12px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  transform: translate(-95%, -50%);
+  margin-bottom: 14px;
+}
+
+.divisor::after {
+  content: "";
+  position: absolute;
+  width: 327px;
+  top: 0px;
+  border: 1px solid #000000;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

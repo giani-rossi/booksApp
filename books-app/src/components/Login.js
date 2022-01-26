@@ -4,14 +4,19 @@ import SignBox from "../stories/SignBox";
 import HeaderLog from "../stories/HeaderLog";
 import { Signin, Signup } from "../stories/SignBox.stories";
 import Collection from "../stories/Collection";
-import { Collections } from "../stories/Collection.stories";
+import Divisor from "../stories/Divisor";
+import Navbar from "../stories/Navbar";
+import { NavbarProfile } from "../stories/Navbar.stories";
+
 const Login = () => {
   return (
     <>
-      <HeaderLog />
+   
+      <NavbarProfile/>
+      <Divisor />
       
-      <Signin />
-      <Collections/>
+     
+    
     </>
   );
 };
