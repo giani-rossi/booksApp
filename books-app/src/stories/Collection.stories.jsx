@@ -8,4 +8,11 @@ export default {
 }
 
 
-export const Collections = (args)=> <Collection/>
+const Template = (args) => <Collection {...args}/>
+
+export const Collections = Template.bind({});
+Collections.args = {
+name: 'Karen Serfaty ',
+qtybooks:'15'
+}
+
