@@ -5,8 +5,8 @@ import FirstSignUp from "./components/FirstSignUp";
 import Login from "./components/Login";
 import Loginv2 from "./components/Loginv2";
 import FriendsBooks from "./components/FriendsBooks";
-import Profile from "./components/Profile";
-
+import FriendProfile from "./components/FriendProfile";
+import MyProfile from "./components/MyProfile";
 function App() {
   /*
  <Router>
@@ -19,8 +19,7 @@ function App() {
   */
   return (
     <>
-    <Profile/>
-    
+      <MyProfile />
     </>
   );
 }

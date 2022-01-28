@@ -6,7 +6,7 @@
     flex-direction: row;
     margin-top: 16px;
     margin-bottom: 32px;
-    margin-left: 16px;
+    margin-left: 24px;
     
 }
 
@@ -39,7 +39,7 @@ margin-left: 16px;
 
 }
 
-.mybook-name {
+.mybook-author {
     font-size: 12px;
 line-height: 14px;
 font-family: 'Roboto', sans-serif;
@@ -55,3 +55,38 @@ margin-top: 8px;
 .mybook {
     height: 100vh;
 }
+
+
+.mybook-image-list {
+   
+    width: 28px;
+    height: 43px;
+    left: 24px;
+    top: 257px;
+    }
+
+    .nobutton-list {
+        display: none;
+    }
+
+    .mybook-author-list {
+        display: none;
+    
+    }
+
+    .stateList {
+        display: none;
+    }
+
+    .showStateList {
+        display: contents;
+    }
+
+    .mybook-card-list {
+        display: flex;
+        flex-direction: row;
+        margin-top: 32px;
+        margin-bottom: 32px;
+        margin-left: 24px;
+        
+    }

@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+
+.request {
+    display: flex;
+    margin-left: 21px;
+    margin-top: 40px;
+}
+
+
+.image-book-request {
+    width: 28px;
+    height: 43px;
+   /* position: absolute;
+    left: 67px;*/
+}
+
+.image-profile-request {
+    width: 42px;
+    height: 43  px;
+    border-radius: 50%;
+}
+
+.text-book-request {
+    display: flex;
+    flex-direction: column;
+    width: 260px;
+    margin-left: 8px;
+}
+
+.text-book-request-name {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+font-size: 12px;
+line-height: 14px;
+}
+
+.text-book-request-bookTitle {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 12px;
+    color: rgba(0, 0, 0, 0.6);
+    margin-top: 3px;
+}
+.buttons-request {
+   margin-top: 14px;
+    margin-left: 91px;
+}

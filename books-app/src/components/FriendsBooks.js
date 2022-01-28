@@ -1,7 +1,7 @@
 import React from "react";
 import CollectionCopy from "./CollectionCopy";
-import Divisor from "./Divisor";
-import Navbar from "./Navbar";
+import Divisor from "../stories/Divisor";
+import Navbar from "../stories/Navbar";
 
 const FriendsBooks = () => {
   return (

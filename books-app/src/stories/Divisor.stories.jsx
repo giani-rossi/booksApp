@@ -25,7 +25,8 @@ DivisorLineProfileAmigue.args = {
 export const DivisorLineProfile = Template.bind({})
 DivisorLineProfile.args = {
     text:'Mis libros:' , 
-    variant:'divisor-text-profile-own' 
+    variant:'divisor-text-profile-own' ,
+    variant3:'divisor-copy-v4'
 }
 
 
@@ -49,4 +50,11 @@ DivisorLinev2.args = {
     text:'Amigues y sus libros: ' ,
     variant:'divisor-text-amigues' ,
     variant2:'divisor-copy-v2'
+}
+
+export const DivisorLinev3 = Template.bind({})
+DivisorLinev3.args = {
+    text:'Sus libros:' , 
+    variant:'divisor-text-profile-amigue' ,
+    variant2:'divisor-copy-v3',
 }
