@@ -33,12 +33,12 @@
 
 .card-add-books {
   height: 120px;
-  position: absolute;
+top: 80px;
   left: 50%;
   transform: translateX(-50%);
   border-radius: 8px;
   background: linear-gradient(180deg, #f9fb96 0%, #fcff7c 83.85%, #f7fa88 100%);
   width: 345px;
   text-align: center;
-  top: 97px;
+  
 }

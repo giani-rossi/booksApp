@@ -9,4 +9,10 @@ export default {
 }
 
 
-export const WelcomeDialog = (args)=> <WelcomeBox {...args} />
+const Template = (args) => <WelcomeBox {...args} />
+
+export const WelcomeDialog = Template.bind({})
+
+WelcomeDialog.args = {
+    name: 'Karen' ,
+}

@@ -1,22 +1,19 @@
 import React, { useState } from "react";
-import "../App.css";
-import SignBox from "../stories/SignBox";
-import HeaderLog from "../stories/HeaderLog";
-import { Signin, Signup } from "../stories/SignBox.stories";
-import Collection from "../stories/Collection";
-import Divisor from "../stories/Divisor";
-import Navbar from "../stories/Navbar";
-import { NavbarProfile } from "../stories/Navbar.stories";
+import HeaderLog from "./HeaderLog";
+import SignBox from "../components/SignBox.jsx";
+import FooterLog from "./FooterLog";
 
 const Login = () => {
   return (
     <>
-   
-      <NavbarProfile/>
-      <Divisor />
-      
-     
-    
+      <HeaderLog />
+      <SignBox
+        children2="Para arrancar create una cuenta. Ya tenés cuenta?"
+        children3="Logueate"
+      >
+        Bienvenidx!
+      </SignBox>
+      <FooterLog/>
     </>
   );
 };

@@ -1,0 +1,17 @@
+.line-divisor {
+  position: absolute;
+  margin-top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.line-divisor::after {
+  content: "";
+  position: absolute;
+  width: 327px;
+  top: 0px;
+  border: 1px solid #e5e5e5;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

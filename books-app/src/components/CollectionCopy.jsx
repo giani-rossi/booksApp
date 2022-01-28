@@ -1,7 +1,11 @@
 import React from "react";
-import "./Collection.css";
+import '../stories/Collection.css'
+import Collection from '../stories/Collection'
 
-const Collection = (props) => {
+
+
+
+const CollectionCopy = (props) => {
   const FAKE_DB_BOOKS = [
     {
       id: 1,
@@ -11,26 +15,26 @@ const Collection = (props) => {
     },
     {
       id: 2,
-      name: "Rick Sanchez",
-      image: "https://rickandmortyapi.com/api/character/avatar/1.jpeg",
+      name: "Gianina Rossi",
+      image: "https://rickandmortyapi.com/api/character/avatar/4.jpeg",
       title: "Book Title",
     },
     {
       id: 3,
       name: "Rick Sanchez",
-      image: "https://rickandmortyapi.com/api/character/avatar/1.jpeg",
+      image: "https://rickandmortyapi.com/api/character/avatar/5.jpeg",
       title: "Book Title",
     },
     {
       id: 4,
       name: "Rick Sanchez",
-      image: "https://rickandmortyapi.com/api/character/avatar/1.jpeg",
+      image: "https://rickandmortyapi.com/api/character/avatar/10.jpeg",
       title: "Book Title",
     },
     {
       id: 5,
       name: "Rick Sanchez",
-      image: "https://rickandmortyapi.com/api/character/avatar/1.jpeg",
+      image: "https://rickandmortyapi.com/api/character/avatar/13.jpeg",
       title: "Book Title",
     },
   ];
@@ -68,34 +72,21 @@ const Collection = (props) => {
     },
   ];
 
-  const { name, qtybooks, image , children, variant='', ...rest } = props;
+  const { name, qtybooks, image , children, ...rest } = props;
   return (
     <>
-    <div className="collection">
-      <div className="collection-profile">
-        <img
-          className="collection-profile-image"
-          src="https://rickandmortyapi.com/api/character/avatar/17.jpeg"
-          alt="profile"
+   <div className='collection-books-copy'>
+        {FAKE_DB_BOOKS.map((item , index) => (
+          <Collection
+          image={item.image}
+          name={item.name}
+          qtybooks={item.id}
         />
-        <div className="collection-profile-text">
-          {" "}
-          <span style={{ fontWeight: "bold", textDecoration: "underline" , marginRight: 2 }}>
-             {name}
-          </span>
-           tiene {qtybooks} libros:
-        </div>
-      </div>
-      <div className={`collection-books ${variant}`}>
-        {FAKE_DB_BOOKS.map((item) => (
-          <div className="collection-card" key={item.id}>
-            <img className="image-book" src={item.image} alt="img" />
-          </div>
+         
         ))}
-        </div>
-      </div>
+       </div>
     </>
   );
 };
 
-export default Collection;
+export default CollectionCopy;

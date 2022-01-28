@@ -1,0 +1,57 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+.mybook-card {
+    display: flex;
+    flex-direction: row;
+    margin-top: 16px;
+    margin-bottom: 32px;
+    margin-left: 16px;
+    
+}
+
+.mybook-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+
+}
+
+.mybook-image {
+   
+width: 88px;
+height: 134px;
+left: 24px;
+top: 257px;
+}
+
+
+.mybook-title {
+    font-size: 12px;
+line-height: 14px;
+font-family: 'Roboto', sans-serif;
+color: #000000;
+font-weight: 700;
+width: 208px;
+height: 28px;
+margin-left: 16px;
+
+}
+
+.mybook-name {
+    font-size: 12px;
+line-height: 14px;
+font-family: 'Roboto', sans-serif;
+color: #000000;
+font-weight: 400;
+width: 208px;
+height: 28px;
+margin-left: 16px;
+margin-top: 8px;
+
+}
+
+.mybook {
+    height: 100vh;
+}

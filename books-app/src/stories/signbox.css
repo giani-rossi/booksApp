@@ -49,7 +49,7 @@ h3 {
 
 
 .card-add-books {
-  height: 18%;
+ 
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -57,7 +57,7 @@ h3 {
   background: linear-gradient(180deg, #f9fb96 0%, #fcff7c 83.85%, #f7fa88 100%);
   width: 90%;
   text-align: center;
-  top: 97px;
+  top: 80px;
 }
 
 

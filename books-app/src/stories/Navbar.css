@@ -4,10 +4,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+ 
 }
 
 .title-navbar {
-  margin-left: 50%;
+ margin-left: 50%;
   font-size: 12px;
   font-family: "Roboto", sans-serif;
   font-weight: 700;
@@ -19,5 +20,6 @@
   width: 24px;
   height: 24px;
   border-radius: 50%;
+  
 
 }

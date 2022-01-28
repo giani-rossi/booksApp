@@ -6,4 +6,13 @@ export default {
     component:Navbar,
 }
 
-export const NavbarProfile = (args)=> <Navbar {...args} />
+const Template= (args)=> <Navbar {...args} />
+
+export const NavbarProfile = Template.bind({})
+NavbarProfile.args = {
+    image: "https://rickandmortyapi.com/api/character/avatar/17.jpeg"
+}
+
+
+
+

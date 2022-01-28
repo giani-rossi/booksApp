@@ -1,13 +1,14 @@
-
-import './App.css';
-import Login from './components/Login';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import FirstSignUp from './components/FirstSignUp';
+import "./App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Divisor from './stories/Divisor';
+
+import FirstSignUp from "./components/FirstSignUp";
+import Login from "./components/Login";
+import Loginv2 from "./components/Loginv2";
+import FriendsBooks from "./components/FriendsBooks";
+import Profile from "./components/Profile";
 
 function App() {
- /*
+  /*
  <Router>
 
    <Routes>
@@ -18,7 +19,8 @@ function App() {
   */
   return (
     <>
-    <Divisor />
+    <Profile/>
+    
     </>
   );
 }
