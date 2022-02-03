@@ -2,8 +2,16 @@ import React from "react";
 import CollectionCopy from "./CollectionCopy";
 import Divisor from "../stories/Divisor";
 import Navbar from "../stories/Navbar";
+import Collection from "../stories/Collection";
+
+
+
+
+
 
 const FriendsBooks = () => {
+
+  
   return (
     <div>
       <Navbar image="https://rickandmortyapi.com/api/character/avatar/17.jpeg" />
@@ -12,7 +20,8 @@ const FriendsBooks = () => {
         variant="divisor-text-amigues"
         variant2="divisor-copy-v2"
       />
-      <CollectionCopy />
+      
+      <CollectionCopy/> 
     </div>
   );
 };

@@ -60,17 +60,17 @@ const MyProfile = () => {
         />
       ))}
       <Divisor
-  text="Mis libros:"
-  variant="divisor-text-profile-own"
-  variant2='divisor-copy-v4'
-/>
-<Mybooks
-  state="showStateList"
-  variant="mybook-image-list"
-  variant2="nobutton-list"
-  variant3="mybook-author-list"
-  variant4='mybook-card-list'
-/>
+        text="Mis libros:"
+        variant="divisor-text-profile-own"
+        variant2="divisor-copy-v4"
+      />
+      <Mybooks
+        state="showStateList"
+        variant="mybook-image-list"
+        variant2="nobutton-list"
+        variant3="mybook-author-list"
+        variant4="mybook-card-list"
+      />
     </div>
   );
 };

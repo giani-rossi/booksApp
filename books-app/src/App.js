@@ -3,10 +3,14 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 import FirstSignUp from "./components/FirstSignUp";
 import Login from "./components/Login";
-import Loginv2 from "./components/Loginv2";
+
 import FriendsBooks from "./components/FriendsBooks";
 import FriendProfile from "./components/FriendProfile";
 import MyProfile from "./components/MyProfile";
+import AddBook from "./components/AddBook";
+import { Signin } from "./stories/SignBox.stories";
+import SignBox from "./stories/SignBox";
+
 function App() {
   /*
  <Router>
@@ -17,9 +21,10 @@ function App() {
   </Routes>
   </Router>
   */
+
   return (
     <>
-      <MyProfile />
+      <FriendProfile/>
     </>
   );
 }

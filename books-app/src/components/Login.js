@@ -8,12 +8,17 @@ const Login = () => {
     <>
       <HeaderLog />
       <SignBox
+        children="Bienvenidx!"
         children2="Para arrancar create una cuenta. Ya tenés cuenta?"
         children3="Logueate"
-      >
-        Bienvenidx!
-      </SignBox>
-      <FooterLog/>
+      ></SignBox>
+
+      <SignBox
+        children=" Bienvenidx de vuelta!"
+        children2="Logueate para arrancar. No tenés cuenta?"
+        children3="Crea una cuenta"
+      ></SignBox>
+      <FooterLog />
     </>
   );
 };
