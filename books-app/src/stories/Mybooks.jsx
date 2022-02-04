@@ -4,8 +4,27 @@ import { Button } from "./Button";
 import Line from "./Line";
 import "./Mybooks.css";
 import State from "./State";
+import { gql, useQuery } from "@apollo/client";
+import { Spinner } from "react-bootstrap";
 
 const Mybooks = (props) => {
+  const USER_BOOKS = gql`
+    query Query {
+      getUser {
+        id
+        name
+        email
+        books {
+          id
+          title
+          author
+          ISBN
+        }
+      }
+    }
+  `;
+
+  /*
   const FAKE_DB_BOOKS = [
     {
       id: 1,
@@ -49,64 +68,83 @@ const Mybooks = (props) => {
       name: "Karen Serfaty",
     },
   ];
-
+*/
   const {
     variant = "mybook-image",
     variant2 = " button-primary-default ",
     variant3 = "",
-    variant4 = 'mybook-card',
+    variant4 = "mybook-card",
     state = "stateList",
     ...rest
   } = props;
 
+  const { data, loading, error } = useQuery(USER_BOOKS);
+
+  error && <p>There is an error</p>;
+
   return (
     <>
-      <div className="mybook">
-        <div className="mybook-books">
-          {FAKE_DB_BOOKS.map((item) => (
-            <div className={`mybook-card ${variant4}`} key={item.id}>
-              <img
-                className={`mybook-image ${variant}`}
-                src={item.image}
-                alt="img"
-              />
-              <div className="mybook-info">
-                <div className="mybook-title">{item.title}</div>
-                <div className={`mybook-author ${variant3}`}>
-                  by {item.author}
-                </div>
-                <div className={`${state}`}>
-                {item.state === "Prestado" ? (
-                  <State icon="greenIcon" icon2="icon2-none" variant="green">
-                    {" "}
-                    Prestado a {item.name}{" "}
-                  </State>
-                ) : item.state === "NoPrestado" ? (
-                  <State icon="icon-none" icon2="icon2-none" variant="black">
-                    {" "}
-                    No está prestado
-                  </State>
-                ) : (
-                  <State icon="icon-none" icon2="yellowIcon" variant="yellow">
-                    Pedido pendiente
-                  </State>
-                )}
-                </div>
-                <div>
-                  <Button
-                    variant="button-primary-default"
-                    className={`${variant2}`}
-
-                  >
-                    Pedir Prestado
-                  </Button>
-                  <Line />
+      {loading ? (
+        <Spinner animation="grow" variant="info" />
+      ) : (
+        <div className="mybook">
+          <div className="mybook-books">
+            {data.getUser.books.map((item, index) => (
+              <div className={`mybook-card ${variant4}`} key={index}>
+                <img
+                  className={`mybook-image ${variant}`}
+                  src="https://rickandmortyapi.com/api/character/avatar/12.jpeg"
+                  alt="img"
+                />
+                <div className="mybook-info">
+                  <div className="mybook-title">{item.title}</div>
+                  <div className={`mybook-author ${variant3}`}>
+                    by {item.author}
+                  </div>
+                  <div className={`${state}`}>
+                    {item.state === "Prestado" ? (
+                      <State
+                        icon="greenIcon"
+                        icon2="icon2-none"
+                        variant="green"
+                      >
+                        {" "}
+                        Prestado a {item.name}{" "}
+                      </State>
+                    ) : item.state === "NoPrestado" ? (
+                      <State
+                        icon="icon-none"
+                        icon2="icon2-none"
+                        variant="black"
+                      >
+                        {" "}
+                        No está prestado
+                      </State>
+                    ) : (
+                      <State
+                        icon="icon-none"
+                        icon2="yellowIcon"
+                        variant="yellow"
+                      >
+                        Pedido pendiente
+                      </State>
+                    )}
+                  </div>
+                  <div>
+                    <Button
+                      variant="button-primary-default"
+                      className={`${variant2}`}
+                    >
+                      Pedir Prestado
+                    </Button>
+                    <Line />
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
+      )}
     </>
   );
 };

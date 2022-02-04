@@ -5,39 +5,46 @@ import Request from "../stories/Request";
 import Divisor from "../stories/Divisor";
 import Mybooks from "../stories/Mybooks.jsx";
 import { Profile } from "./MyProfile.jsx";
+import { gql, useMutation, useQuery } from "@apollo/client";
+import { Spinner } from "react-bootstrap";
+
+const ALL_DATA = gql`
+  query GetUserById {
+    getUsers {
+      id
+      name
+      email
+      books {
+        id
+        title
+        author
+        ISBN
+      }
+    }
+  }
+`;
+
+const LENDINGS = gql`
+  mutation AddBookToUser($bookLending: Float!) {
+    askUserForLend {
+      id
+      user_id
+      book_id
+    }
+  }
+`;
 
 const MyProfile = () => {
-  const FAKE_DB_USER = [
-    {
-      id: 1,
-      author: "Autorx: Debby Applegate.",
-      bookTitle: "Madam: The Biography of Polly Adler, Icon of the Jazz Age.",
-      imageBook: "https://rickandmortyapi.com/api/character/avatar/1.jpeg",
-      imageProfile: "https://rickandmortyapi.com/api/character/avatar/17.jpeg",
-      name: "Karen",
-    },
-    {
-      id: 2,
-      author: "Autorx: Debby Applegate.",
-      bookTitle: "Madam: The Biography of Polly Adler, Icon of the Jazz Age.",
-      imageBook: "https://rickandmortyapi.com/api/character/avatar/1.jpeg",
-      imageProfile: "https://rickandmortyapi.com/api/character/avatar/17.jpeg",
-      name: "Gianina",
-    },
-    {
-      id: 3,
-      author: "Autorx: Debby Applegate.",
-      bookTitle: "Madam: The Biography of Polly Adler, Icon of the Jazz Age.",
-      imageBook: "https://rickandmortyapi.com/api/character/avatar/1.jpeg",
-      imageProfile: "https://rickandmortyapi.com/api/character/avatar/17.jpeg",
-      name: "Catalina",
-    },
-  ];
-
+  const { data, loading, error } = useQuery(ALL_DATA);
+  const [
+    lendingBook,
+    { data: dataLend, loading: loadingLend, error: errorLend },
+  ] = useMutation(LENDINGS);
   return (
     <div>
       <Navbar image="https://rickandmortyapi.com/api/character/avatar/17.jpeg" />
       <Buttonback title="Volver al inicio" />
+
       <Profile
         image="https://rickandmortyapi.com/api/character/avatar/17.jpeg"
         lendings="3"
@@ -49,16 +56,25 @@ const MyProfile = () => {
         variant="divisor-text-profile-lendings"
         variant2="divisor-copy-v3"
       />
+      {loading ? (
+        <Spinner animation="grow" variant="info" />
+      ) : (
+        data.getUsers.map((item, index) =>
+          item.books.map((element) => (
+            <Request
+              key={index}
+              author={element.author}
+              bookTitle={element.title}
+              imageBook="https://rickandmortyapi.com/api/character/avatar/17.jpeg"
+              //{item.imageBook}
+              imageProfile="https://rickandmortyapi.com/api/character/avatar/12.jpeg"
+              //{item.imageProfile}
+              name={item.name}
+            />
+          ))
+        )
+      )}
 
-      {FAKE_DB_USER.map((item) => (
-        <Request
-          author={item.author}
-          bookTitle={item.bookTitle}
-          imageBook={item.imageBook}
-          imageProfile={item.imageProfile}
-          name={item.name}
-        />
-      ))}
       <Divisor
         text="Mis libros:"
         variant="divisor-text-profile-own"

@@ -10,6 +10,8 @@ import MyProfile from "./components/MyProfile";
 import AddBook from "./components/AddBook";
 import { Signin } from "./stories/SignBox.stories";
 import SignBox from "./stories/SignBox";
+import Request from "./stories/Request";
+
 
 function App() {
   /*
@@ -24,7 +26,7 @@ function App() {
 
   return (
     <>
-      <FriendProfile/>
+      <MyProfile/>
     </>
   );
 }

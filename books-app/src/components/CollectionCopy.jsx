@@ -24,16 +24,24 @@ const CollectionCopy = (props) => {
   const { data, loading, error } = useQuery(ALL_DATA);
 
   const { name, qtybooks, image, children, ...rest } = props;
-  
-  
-  error && <p>There is an error</p>
-  console.log(data)
+
+  error && <p>There is an error</p>;
+  console.log(data);
   return (
     <>
       <div className="collection-books-copy">
-      {loading ? <Spinner animation="grow" variant="info" /> : data.getUsers.map((item, index) => (
-          <Collection key={index} image={item.image} name={item.name} qtybooks={item.id} /> 
-        ))}
+        {loading ? (
+          <Spinner animation="grow" variant="info" />
+        ) : (
+          data.getUsers.map((item, index) => (
+            <Collection
+              key={index}
+              image={item.image}
+              name={item.name}
+              qtybooks={item.id}
+            />
+          ))
+        )}
       </div>
     </>
   );

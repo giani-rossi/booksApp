@@ -16,7 +16,7 @@ const Request = (props) => {
 
   return (
     <>
-      <div className='request'>
+      <div className="request">
         <div className="images-request">
           <img
             className="image-profile-request"
@@ -31,15 +31,21 @@ const Request = (props) => {
             este libro
           </div>
           <div className="text-book-request-bookTitle">
-            {bookTitle} {author}
+            {bookTitle} Autorx: {author}
           </div>
         </div>
       </div>
-      <div className='buttons-request'>
-  <Button variant="button-primary-default-request" children='Prestar'></Button>
-  <Button variant="button-secondary-default-request" children='No prestar'></Button>
-  </div>
-  <Line/>
+      <div className="buttons-request">
+        <Button
+          variant="button-primary-default-request"
+          children="Prestar"
+        ></Button>
+        <Button
+          variant="button-secondary-default-request"
+          children="No prestar"
+        ></Button>
+      </div>
+      <Line />
     </>
   );
 };
