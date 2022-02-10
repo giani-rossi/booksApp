@@ -1,5 +1,5 @@
 import React from 'react';
-import './button.css';
+import '../stories/button.css';
 
 /**
  * Primary UI component for user interaction

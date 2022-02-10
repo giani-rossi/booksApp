@@ -1,5 +1,5 @@
 import React from "react";
-import './profile.css'
+import '../stories/profile.css'
 
 export const Profile = (props) => {
   const { name, qtybooks, lendings, children, image, ...rest } = props;

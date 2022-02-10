@@ -32,6 +32,7 @@ export const MinimalDefault = () => (
 export const PrimaryDefaultv2 = Template.bind({});
 PrimaryDefaultv2.args = {
   variant: "button-primary-default-myprofile",
+  children:'Agregar libros'
 };
 
 export const PrimaryDefaultRequest = Template.bind({});

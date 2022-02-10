@@ -1,7 +1,7 @@
 import React from "react";
 
 import '../stories/profile.css'
-import { Button } from "../stories/Button";
+import { Button } from "../components/Button.jsx";
 
 
 export const Profile = (props) => {

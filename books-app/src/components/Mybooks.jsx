@@ -1,9 +1,9 @@
 import React from "react";
-import { Button } from "./Button";
+import { Button } from "../components/Button";
 
 import Line from "./Line";
-import "./Mybooks.css";
-import State from "./State";
+import "../stories/Mybooks.css";
+import State from "../components/State";
 import { gql, useQuery } from "@apollo/client";
 import { Spinner } from "react-bootstrap";
 
@@ -84,9 +84,8 @@ const Mybooks = (props) => {
 
   return (
     <>
-      {loading ? (
-        <Spinner animation="grow" variant="info" />
-      ) : (
+      {loading && <Spinner animation="grow" variant="info" />}
+      {!loading && (
         <div className="mybook">
           <div className="mybook-books">
             {data.getUser.books.map((item, index) => (
@@ -102,25 +101,27 @@ const Mybooks = (props) => {
                     by {item.author}
                   </div>
                   <div className={`${state}`}>
-                    {item.state === "Prestado" ? (
+                    {item.state === " LEND_ACCEPTED" && (
                       <State
                         icon="greenIcon"
                         icon2="icon2-none"
                         variant="green"
                       >
-                        {" "}
                         Prestado a {item.name}{" "}
                       </State>
-                    ) : item.state === "NoPrestado" ? (
+                    )}
+
+                    {item.state === "LEND_REJECTED" && (
                       <State
                         icon="icon-none"
                         icon2="icon2-none"
                         variant="black"
                       >
-                        {" "}
                         No está prestado
                       </State>
-                    ) : (
+                    )}
+
+                    {item.state === " LEND_PENDING" && (
                       <State
                         icon="icon-none"
                         icon2="yellowIcon"

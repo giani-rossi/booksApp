@@ -1,9 +1,9 @@
-import React from "react";
-import { Buttonback } from "../stories/Buttonback";
-import Navbar from "../stories/Navbar";
-import { Profile } from "../stories/Profile.jsx";
-import Divisor from "../stories/Divisor";
-import Mybooks from "../stories/Mybooks.jsx";
+  import React from "react";
+import { Buttonback } from "../components/Buttonback";
+import Navbar from "../components/Navbar";
+import { Profile } from "../components/Profile.jsx";
+import Divisor from "../components/Divisor";
+import Mybooks from "../components/Mybooks.jsx";
 import { useQuery, gql } from "@apollo/client";
 import { Spinner } from "react-bootstrap";
 

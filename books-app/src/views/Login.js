@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import HeaderLog from "../stories/HeaderLog";
-import SignBox from "../stories/SignBox.jsx";
-import FooterLog from "../stories/FooterLog";
+import HeaderLog from "../components/HeaderLog";
+import SignBox from "../components/SignBox.jsx";
+import FooterLog from "../components/FooterLog";
 
 const Login = () => {
   return (

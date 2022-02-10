@@ -1,5 +1,5 @@
 import React from 'react';
-import './HeaderLog.css'
+import '../stories/HeaderLog.css'
 
 const HeaderLog = (props) => {
 

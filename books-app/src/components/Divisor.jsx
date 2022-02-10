@@ -1,5 +1,5 @@
 import React from 'react'
-import './Divisor.css'
+import '../stories/Divisor.css'
 
 
 const Divisor = (props) => {

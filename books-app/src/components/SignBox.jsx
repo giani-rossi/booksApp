@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { Button } from "./Button";
-import "./signbox.css";
+import { Button } from "../components/Button";
+import "../stories/signbox.css";
 import { GoogleLogin } from "react-google-login";
 import FacebookLogin from "react-facebook-login";
 import { useNavigate } from "react-router-dom";

@@ -1,12 +1,13 @@
 import React from 'react';
-import { Buttonback } from '../stories/Buttonback';
-import Mybooks from '../stories/Mybooks';
-import Navbar from '../stories/Navbar';
-import Search from '../stories/Search';
+import { Buttonback } from '../components/Buttonback';
+import Mybooks from '../components/Mybooks';
+import '../stories/profile.css'
+import Navbar from '../components/Navbar';
+import Search from '../components/Search';
 
 
 
-const AddBook = (props) => {
+const AddBooks = (props) => {
 
     
     return (
@@ -20,4 +21,4 @@ const AddBook = (props) => {
     )
 }
 
-export default AddBook
+export default AddBooks

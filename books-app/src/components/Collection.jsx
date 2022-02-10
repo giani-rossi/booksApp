@@ -1,5 +1,5 @@
 import React from "react";
-import "./Collection.css";
+import "../stories/Collection.css";
 
 const Collection = (props) => {
   const FAKE_DB_BOOKS = [

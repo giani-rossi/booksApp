@@ -1,12 +1,15 @@
 import React from "react";
-import { Buttonback } from "../stories/Buttonback";
-import Navbar from "../stories/Navbar";
-import Request from "../stories/Request";
-import Divisor from "../stories/Divisor";
-import Mybooks from "../stories/Mybooks.jsx";
-import { Profile } from "./MyProfile.jsx";
+import { Buttonback } from "../components/Buttonback";
+import Navbar from "../components/Navbar";
+import Request from "../components/Request";
+import Divisor from "../components/Divisor";
+import "../stories/Request.css";
 import { gql, useMutation, useQuery } from "@apollo/client";
 import { Spinner } from "react-bootstrap";
+import { Profile } from "../components/Profile";
+import { Button } from "../components/Button";
+import State from "../components/State";
+import Line from "../components/Line";
 
 const ALL_DATA = gql`
   query GetUserById {
@@ -34,12 +37,10 @@ const LENDINGS = gql`
   }
 `;
 
-const MyProfile = () => {
+const MyProfileLendOK = (props) => {
+  const { variant, state = "stateLend", ...rest } = props;
   const { data, loading, error } = useQuery(ALL_DATA);
-  const [
-    lendingBook,
-    { data: dataLend, loading: loadingLend, error: errorLend },
-  ] = useMutation(LENDINGS);
+
   return (
     <div>
       <Navbar image="https://rickandmortyapi.com/api/character/avatar/17.jpeg" />
@@ -51,14 +52,20 @@ const MyProfile = () => {
         name="Tu perfil"
         qtybooks="15"
       />
+      <Button
+        style={{ position: "absolute", right: " 24px", top: "125px" }}
+        variant="button-primary-default-myprofile"
+      >
+        Agregar libros
+      </Button>
       <Divisor
         text="Pedidos de préstamos:"
         variant="divisor-text-profile-lendings"
         variant2="divisor-copy-v3"
       />
-      {loading ? (
-        <Spinner animation="grow" variant="info" />
-      ) : (
+      {error && console.log(error)}
+      {loading && <Spinner animation="grow" variant="info" />}
+      {!loading &&
         data.getUsers.map((item, index) =>
           item.books.map((element) => (
             <Request
@@ -72,23 +79,9 @@ const MyProfile = () => {
               name={item.name}
             />
           ))
-        )
-      )}
-
-      <Divisor
-        text="Mis libros:"
-        variant="divisor-text-profile-own"
-        variant2="divisor-copy-v4"
-      />
-      <Mybooks
-        state="showStateList"
-        variant="mybook-image-list"
-        variant2="nobutton-list"
-        variant3="mybook-author-list"
-        variant4="mybook-card-list"
-      />
+        )}
     </div>
   );
 };
 
-export default MyProfile;
+export default MyProfileLendOK;

@@ -1,5 +1,5 @@
 import React from "react";
-import "./Buttonback.css";
+import "../stories/Buttonback.css";
 
 export const Buttonback = (props) => {
   const { title, children, ...rest } = props;

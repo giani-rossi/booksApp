@@ -1,8 +1,8 @@
 import React from "react";
-import "./State.css";
+import "../stories/State.css";
 
 const State = (props) => {
-  const { variant, children, icon, icon2, ...rest } = props;
+  const { variant, children, icon, icon2, icon3, ...rest } = props;
 
   return (
     <>
@@ -24,7 +24,7 @@ const State = (props) => {
           />
         </svg>
         <svg
-        className={`${icon2}`}
+          className={`${icon2}`}
           width="12"
           height="12"
           viewBox="0 0 12 12"
@@ -42,6 +42,21 @@ const State = (props) => {
             stroke="#AFA804"
             stroke-linecap="round"
             stroke-linejoin="round"
+          />
+        </svg>
+
+        <svg
+          className={`${icon3}`}
+          width="8"
+          height="8"
+          viewBox="0 0 8 8"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M7.33341 0.666687L0.666748 7.33335M7.33341 7.33335L0.666748 0.666687L7.33341 7.33335Z"
+            stroke="#B20C0C"
+            stroke-linecap="round"
           />
         </svg>
 

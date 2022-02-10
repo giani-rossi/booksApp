@@ -1,11 +1,11 @@
 import React from "react";
-import WelcomeBox from "../stories/WelcomeBox";
-import Navbar from "../stories/Navbar";
-import Divisor from "../stories/Divisor";
-import CollectionCopy from "./CollectionCopy";
+import WelcomeBox from "../components/WelcomeBox";
+import Navbar from "../components/Navbar";
+import Divisor from "../components/Divisor";
+import CollectionCopy from "../components/CollectionCopy";
 import { useQuery, gql } from "@apollo/client";
 import { Spinner } from "react-bootstrap";
-import Collection from "../stories/Collection";
+
 
 const USER_INFO = gql`
   query UserInfo {

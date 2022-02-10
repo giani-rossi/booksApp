@@ -1,8 +1,7 @@
 import React from "react";
-import CollectionCopy from "./CollectionCopy";
-import Divisor from "../stories/Divisor";
-import Navbar from "../stories/Navbar";
-import Collection from "../stories/Collection";
+import CollectionCopy from "../components/CollectionCopy";
+import Divisor from "../components/Divisor";
+import Navbar from "../components/Navbar";
 
 
 

@@ -1,6 +1,6 @@
 import React from "react";
 import "../stories/Collection.css";
-import Collection from "../stories/Collection";
+import Collection from "../components/Collection";
 import { gql, useQuery } from "@apollo/client";
 import { Spinner } from "react-bootstrap";
 

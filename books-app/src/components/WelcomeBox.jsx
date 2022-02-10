@@ -1,6 +1,6 @@
 import React from "react";
 import { Button } from "./Button";
-import  "./welcomebox.css";
+import  "../stories/welcomebox.css";
 
 const WelcomeBox = (props) => {
   const { name, children, ...rest } = props;

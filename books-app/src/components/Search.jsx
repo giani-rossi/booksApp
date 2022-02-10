@@ -1,5 +1,5 @@
 import React from "react";
-import "./Search.css";
+import "../stories/Search.css";
 import { Form, FormControl } from "react-bootstrap";
 
 const Search = (props) => {

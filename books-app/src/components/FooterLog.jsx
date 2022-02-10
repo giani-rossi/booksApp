@@ -1,6 +1,6 @@
 import React from "react";
 
-import "./footerlog.css";
+import "../stories/footerlog.css";
 
 const FooterLog = (props) => {
   const { children, ...rest } = props;
