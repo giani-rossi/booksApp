@@ -4,6 +4,7 @@ import Mybooks from '../components/Mybooks';
 import '../stories/profile.css'
 import Navbar from '../components/Navbar';
 import Search from '../components/Search';
+import { AddBook } from '../stories/Mybooks.stories';
 
 
 
@@ -16,7 +17,7 @@ const AddBooks = (props) => {
             <Buttonback title="Volver al inicio" />
             <div className="name-profile"> Agregar libros </div>
             <Search/>
-            <Mybooks/>
+            <AddBook children='Agregar Libro'/>
         </>
     )
 }

@@ -75,6 +75,7 @@ const Mybooks = (props) => {
     variant3 = "",
     variant4 = "mybook-card",
     state = "stateList",
+    children = 'Pedir prestado',
     ...rest
   } = props;
 
@@ -136,7 +137,7 @@ const Mybooks = (props) => {
                       variant="button-primary-default"
                       className={`${variant2}`}
                     >
-                      Pedir Prestado
+                      {children}
                     </Button>
                     <Line />
                   </div>
