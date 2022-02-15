@@ -3,16 +3,17 @@ import { Button } from "../components/Button";
 import "../stories/signbox.css";
 import { GoogleLogin } from "react-google-login";
 import FacebookLogin from "react-facebook-login";
-import { useNavigate } from "react-router-dom";
+import LinkTo from "@storybook/addon-links/react";
+
+import { Link, useNavigate } from "react-router-dom";
 
 const SignBox = (props) => {
-  const { children, children2, children3, ...rest } = props;
+  const { children, children2, children3, children4, ...rest } = props;
 
   const onLoginSucces = (response) => {
     console.log(response);
     console.log(response.profileObj.imageUrl);
     setLoginData(response);
-   
   };
 
   const onLoginFailure = (response) => {
@@ -31,20 +32,25 @@ const SignBox = (props) => {
   const [loginData, setLoginData] = useState({});
   console.log(loginData);
 
-  
   return (
     <>
       <div className="card-login">
         <div>
           <h3>{children}</h3>
           <p className="text-login">
-           
-            {children2}
-            
-            <a style={{ color: "black" }} href="/">
-            <br/>
-              {children3}
-            </a>
+            {children2}{" "}
+            <Link to="/FirstSignUp">
+              <a style={{ color: "black" }}>
+                <br />
+                {children3}
+              </a>
+            </Link>
+            <Link to="/Loginv2">
+              <a style={{ color: "black" }}>
+                <br />
+                {children4}
+              </a>
+            </Link>
           </p>
 
           <GoogleLogin
@@ -81,7 +87,6 @@ const SignBox = (props) => {
           />
         </div>
       </div>
-      
     </>
   );
 };

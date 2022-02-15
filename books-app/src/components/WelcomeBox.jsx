@@ -1,6 +1,7 @@
 import React from "react";
 import { Button } from "./Button";
 import  "../stories/welcomebox.css";
+import { Link } from "react-router-dom";
 
 const WelcomeBox = (props) => {
   const { name, children, ...rest } = props;
@@ -13,9 +14,9 @@ const WelcomeBox = (props) => {
           <p className="text-add-books">
             Para arrancar sumá algunos libros que tengas.
           </p>
-          <Button className="button-primary-default button-add-books">
+          <Link to="/AddBook"> <Button className="button-primary-default button-add-books">
             Agregar Libros
-          </Button>
+          </Button> </Link>
         </div>
       </div>
     </div>

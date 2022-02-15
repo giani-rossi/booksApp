@@ -6,6 +6,7 @@ import "../stories/Mybooks.css";
 import State from "../components/State";
 import { gql, useQuery } from "@apollo/client";
 import { Spinner } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const Mybooks = (props) => {
   const USER_BOOKS = gql`

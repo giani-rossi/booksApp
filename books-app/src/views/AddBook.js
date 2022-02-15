@@ -5,6 +5,7 @@ import '../stories/profile.css'
 import Navbar from '../components/Navbar';
 import Search from '../components/Search';
 import { AddBook } from '../stories/Mybooks.stories';
+import { Link } from 'react-router-dom';
 
 
 
@@ -14,7 +15,7 @@ const AddBooks = (props) => {
     return (
         <>
             <Navbar image="https://rickandmortyapi.com/api/character/avatar/17.jpeg" />
-            <Buttonback title="Volver al inicio" />
+            <Link to="/FirstSignUp">  <Buttonback title="Volver al inicio" /> </Link>
             <div className="name-profile"> Agregar libros </div>
             <Search/>
             <AddBook children='Agregar Libro'/>
