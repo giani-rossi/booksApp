@@ -5,6 +5,7 @@ import Divisor from "../components/Divisor";
 import CollectionCopy from "../components/CollectionCopy";
 import { useQuery, gql } from "@apollo/client";
 import { Spinner } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 
 const USER_INFO = gql`
@@ -27,7 +28,7 @@ const FirstSignUp = () => {
       {loading ? (
         <Spinner animation="grow" variant="info" />
       ) : (
-        <WelcomeBox name={data.getUser.name} />
+          <WelcomeBox name={data.getUser.name} />
       )}
       {error && <p>There is an error</p>}
       <Divisor

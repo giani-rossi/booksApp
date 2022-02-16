@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../stories/Collection.css";
 
 const Collection = (props) => {
@@ -80,9 +81,9 @@ const Collection = (props) => {
         />
         <div className="collection-profile-text">
           {" "}
-          <span style={{ fontWeight: "bold", textDecoration: "underline" , marginRight: 2 }}>
-             {name}
-          </span>
+          <Link to="/FriendProfile">   <span style={{ fontWeight: "bold", textDecoration: "underline" , marginRight: 2 }}>
+           {name} 
+          </span></Link>
            tiene {qtybooks} libros:
         </div>
       </div>

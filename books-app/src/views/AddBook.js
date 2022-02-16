@@ -18,7 +18,7 @@ const AddBooks = (props) => {
             <Link to="/FirstSignUp">  <Buttonback title="Volver al inicio" /> </Link>
             <div className="name-profile"> Agregar libros </div>
             <Search/>
-            <AddBook children='Agregar Libro'/>
+            <AddBook children='Tengo este libro'/>
         </>
     )
 }

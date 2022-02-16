@@ -2,6 +2,7 @@ import React from "react";
 
 import '../stories/profile.css'
 import { Button } from "../components/Button.jsx";
+import { Link } from "react-router-dom";
 
 
 export const Profile = (props) => {
@@ -21,7 +22,7 @@ export const Profile = (props) => {
         <div>{qtybooks} libros</div>
         <div>{lendings} préstamos</div>
       </div>
-       <Button variant='button-primary-default-myprofile'>Agregar libros</Button>
+      <Link to="/AddBook">   <Button variant='button-primary-default-myprofile'>Agregar libros</Button> </Link>
       </div>
     </>
   );

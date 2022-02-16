@@ -1,4 +1,4 @@
-  import React from "react";
+import React from "react";
 import { Buttonback } from "../components/Buttonback";
 import Navbar from "../components/Navbar";
 import { Profile } from "../components/Profile.jsx";
@@ -6,6 +6,7 @@ import Divisor from "../components/Divisor";
 import Mybooks from "../components/Mybooks.jsx";
 import { useQuery, gql } from "@apollo/client";
 import { Spinner } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const USER_BOOKS = gql`
   query Query {
@@ -25,11 +26,14 @@ const USER_BOOKS = gql`
 
 const FriendProfile = () => {
   const { data, loading, error } = useQuery(USER_BOOKS);
-error && <p>'There is an error'</p>
+  error && <p>'There is an error'</p>;
   return (
     <div>
       <Navbar image="https://rickandmortyapi.com/api/character/avatar/17.jpeg" />
-      <Buttonback title="Volver al inicio" />
+      <Link to="/FirstSignUp">
+        {" "}
+        <Buttonback title="Volver al inicio" />{" "}
+      </Link>
 
       {loading ? (
         <Spinner animation="grow" variant="info" />

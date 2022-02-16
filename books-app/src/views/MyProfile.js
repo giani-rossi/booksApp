@@ -7,6 +7,7 @@ import Mybooks from "../components/Mybooks.jsx";
 import { Profile } from "../components/MyProfile";
 import { gql, useMutation, useQuery } from "@apollo/client";
 import { Spinner } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const ALL_DATA = gql`
   query GetUserById {
@@ -43,7 +44,7 @@ const MyProfile = () => {
   return (
     <div>
       <Navbar image="https://rickandmortyapi.com/api/character/avatar/17.jpeg" />
-      <Buttonback title="Volver al inicio" />
+      <Link to="/FirstSignUp">  <Buttonback title="Volver al inicio" /> </Link>
 
       <Profile
         image="https://rickandmortyapi.com/api/character/avatar/17.jpeg"

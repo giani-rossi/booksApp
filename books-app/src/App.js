@@ -21,6 +21,8 @@ function App() {
           <Route path="/Loginv2" element={<Loginv2 />}></Route>
           <Route path="/FirstSignUp" element={<FirstSignUp/>}></Route>
           <Route path="/AddBook" element={<AddBook/>}></Route>
+          <Route path="/MyProfile" element={<MyProfile/>}></Route>
+          <Route path="/FriendProfile" element={<FriendProfile/>}></Route>
         </Routes>
       </Router>
     </>

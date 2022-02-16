@@ -5,6 +5,7 @@ import "../stories/Request.css";
 import State from "../components/State";
 import { Spinner } from "react-bootstrap";
 import { gql, useMutation, useQuery } from "@apollo/client";
+import { Link } from "react-router-dom";
 
 const FAKE_DB_BOOKS = [
   {
@@ -92,8 +93,11 @@ const Request = (props) => {
         </div>
         <div className="text-book-request">
           <div className="text-book-request-name">
-            <span style={{ textDecoration: "underline" }}>{name}</span> te pidio
-            este libro
+            <Link to="/FriendProfile">
+              {" "}
+              <span style={{ textDecoration: "none" }}>{name}</span>{" "}
+            </Link>{" "}
+            te pidio este libro
           </div>
           <div className="text-book-request-bookTitle">
             {bookTitle} Autorx: {author}
